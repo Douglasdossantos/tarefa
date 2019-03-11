@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace tarefa
+namespace Tarefas
 {
     public class BundleConfig
     {

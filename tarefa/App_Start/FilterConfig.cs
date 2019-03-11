@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace tarefa
+namespace Tarefas
 {
     public class FilterConfig
     {

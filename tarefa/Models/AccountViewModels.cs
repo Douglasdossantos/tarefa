@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace tarefa.Models
+namespace Tarefas.Models
 {
     public class ExternalLoginConfirmationViewModel
     {
@@ -65,12 +65,22 @@ namespace tarefa.Models
     public class RegisterViewModel
     {
         [Required]
+        [StringLength(100,ErrorMessage ="O/A {0} deve ter no maximo  {1} caracteres. ")]
+        [Display(Name = "Nome Completo")]
+        public string FullName { get; set; }
+
+        [Required]
+        [StringLength(100, ErrorMessage = "O/A {0} deve ter no maximo  [1] Caracteres. ")]
+        [Display(Name ="Apelido")]
+        public string NickName { get; set; }
+        
+        [Required]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
 
         [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [StringLength(100, ErrorMessage = "a {0} senha deve conter {2} characters long.", MinimumLength = 6)]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
         public string Password { get; set; }

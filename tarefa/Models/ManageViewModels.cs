@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 
-namespace tarefa.Models
+namespace Tarefas.Models
 {
     public class IndexViewModel
     {

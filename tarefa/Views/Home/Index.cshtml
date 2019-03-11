@@ -1,17 +1,53 @@
 ﻿@{
     ViewBag.Title = "Home Page";
+    var name = ViewBag.FullName;
+    var nick = ViewBag.nickName;
+    var email = ViewBag.email;
 }
 
 <div class="jumbotron">
     <h1>ASP.NET</h1>
     <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
     <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <p>
+        @if (User.Identity.IsAuthenticated)
+        {
+            if ((bool)ViewBag.usarTarefas)
+            {
+                <span>
+                    Você já esta usando o serviço de Tarefas.
+                    <br />
+                    Sendo Assim, você pode ...
+                </span>
+                <br />
+                <a href="@Url.Action("Index","Times")">Gerenciar Seus Times</a>
+                <br />
+                <span>ou</span>
+                <br />
+                <a href="@Url.Action("Index","Tarefas")">ir Para as Suas tarefas</a>
+            }
+            else
+            {
+                <span>Você ainda não está uando  o serviço de tarefas</span>
+                <br />
+                <a href="@Url.Action("Entrar","Times")">Começar a usaras tarefas agora!</a>
+            }
+        }
+        else
+        {
+            <a href="@Url.Action("Resister","TimeSpan")">Registre-se e conheças os serviços disponiveis!</a>
+            <br />
+            <span>ou</span>
+            <br />
+            <a href="@Url.Action("Login","Account")">Entre com o seu Login e começe a usar agora </a>
+        }
+    </p>
 </div>
 
 <div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
+                    <div class="col-md-4">
+                        <h2>Getting started</h2>
+<p>
             ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
             enables a clean separation of concerns and gives you full control over markup
             for enjoyable, agile development.

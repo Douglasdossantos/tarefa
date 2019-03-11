@@ -5,9 +5,9 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
-using tarefa.Models;
+using Tarefas.Models;
 
-namespace tarefa
+namespace Tarefas
 {
     public partial class Startup
     {

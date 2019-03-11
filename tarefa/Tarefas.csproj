@@ -189,12 +189,28 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\TimesController.cs" />
+    <Compile Include="Extended\UserExtended.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\ApplicationDbContext\201903080227035_Inicio do Projeto.cs" />
+    <Compile Include="Migrations\ApplicationDbContext\201903080227035_Inicio do Projeto.Designer.cs">
+      <DependentUpon>201903080227035_Inicio do Projeto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\ApplicationDbContext\Configuration.cs" />
+    <Compile Include="Migrations\ContextoDB\201903090529110_Inclusão das outras Tabelas.cs" />
+    <Compile Include="Migrations\ContextoDB\201903090529110_Inclusão das outras Tabelas.Designer.cs">
+      <DependentUpon>201903090529110_Inclusão das outras Tabelas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\ContextoDB\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\ContextoDB.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\TarefasModel.cs" />
+    <Compile Include="Models\TimeModel.cs" />
+    <Compile Include="Models\UsuariosTarefasModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -254,6 +270,10 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Times\Cadastro.cshtml" />
+    <Content Include="Views\Times\UsuariosTime.cshtml" />
+    <Content Include="Views\Times\BuscarUsuarios.cshtml" />
+    <Content Include="Views\Times\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -270,6 +290,14 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\ApplicationDbContext\201903080227035_Inicio do Projeto.resx">
+      <DependentUpon>201903080227035_Inicio do Projeto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\ContextoDB\201903090529110_Inclusão das outras Tabelas.resx">
+      <DependentUpon>201903090529110_Inclusão das outras Tabelas.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
